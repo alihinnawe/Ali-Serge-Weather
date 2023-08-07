@@ -55,28 +55,40 @@ function App() {
       }
     }
     fetchWeatherAPI();
-
-    /*set weather every 5 seconds*/
-    const fetchDelay_Interval = setInterval(fetchWeatherAPI, 5000);
-    return () => {
-      /*clear the timer*/
-      clearInterval(fetchDelay_Interval);
-    };
   }, [setWeather]);
 
   /*add a new activity for a Good/Bad weather and merge it to the previous activities */
+  // function handleAddActivity(newActivity) {
+  //   console.log("newActivity", newActivity);
+
+  //   setActivities([
+  //     {
+  //       id: uid(),
+  //       name: newActivity.name,
+  //       /*is this activity for good or bad weather?*/
+  //       isForGoodWeather: newActivity.checkbox ? true : false,
+  //     },
+  //     ...activities,
+  //   ]);
+  // }
+
   function handleAddActivity(newActivity) {
     console.log("newActivity", newActivity);
-
-    setActivities([
-      {
-        id: uid(),
-        name: newActivity.name,
-        /*is this activity for good or bad weather?*/
-        isForGoodWeather: newActivity.checkbox ? true : false,
-      },
-      ...activities,
-    ]);
+    console.log("activities", activities);
+    const doesActivityExist = activities.some(
+      (activity) => activity.name === newActivity.name
+    );
+    if (!doesActivityExist) {
+      setActivities([
+        {
+          id: uid(),
+          name: newActivity.name,
+          // is this activity for good or bad weather?
+          isForGoodWeather: newActivity.checkbox ? true : false,
+        },
+        ...activities,
+      ]);
+    }
   }
 
   // function handleAddActivity1(newActivity) {

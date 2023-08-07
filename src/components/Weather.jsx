@@ -14,7 +14,7 @@ export default function Weather({ weather }) {
           ? "The weather is great, go outside and: "
           : "Bad weather outside! Here's what you can do now:"}
       </h2>
-      <h5 id="my-h1">Go a head and add your favorite Activity!</h5>
+      <h5 id="my-h1">Go a head and add your favorite Activities: </h5>
 
       <h6>
         {weather.isGoodWeather

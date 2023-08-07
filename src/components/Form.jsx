@@ -2,12 +2,6 @@ import React from "react";
 import "./Form.css";
 // import Select from "react-select";
 
-// const options = [
-//   { value: "chocolate", label: "Chocolate" },
-//   { value: "strawberry", label: "Strawberry" },
-//   { value: "vanilla", label: "Vanilla" },
-// ];
-
 function hideH1() {
   // Get the h1 tag by its id
   var h1 = document.getElementById("my-h1");
