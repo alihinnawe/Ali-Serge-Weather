@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app {
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 50%;
+  margin: 0 auto;
+  gap: 50px;
+  border-radius: 40px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 50px;
+}
+
+/* button,
+input {
+  padding: 0.5rem;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
