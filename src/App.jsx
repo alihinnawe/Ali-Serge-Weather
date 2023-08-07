@@ -55,6 +55,13 @@ function App() {
       }
     }
     fetchWeatherAPI();
+
+    /*set weather every 5 seconds*/
+    const fetchDelay_Interval = setInterval(fetchWeatherAPI, 5000);
+    return () => {
+      /*clear the timer*/
+      clearInterval(fetchDelay_Interval);
+    };
   }, [setWeather]);
 
   /*add a new activity for a Good/Bad weather and merge it to the previous activities */
