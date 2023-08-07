@@ -1,0 +1,22 @@
+h6 {
+  display: none;
+}
+
+h2 {
+  /* padding-top: 100px; */
+  font-size: 50px;
+}
+#h2_header {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.title_form {
+  font-size: 25px;
+}
+
+#my-h1 {
+  padding-top: 20px;
+  font-size: 17px;
+  color: rgba(193, 26, 26, 0.931);
+}
